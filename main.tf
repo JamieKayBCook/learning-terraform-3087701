@@ -39,7 +39,7 @@ module "blog_sg" {
   ingress_rules       = ["http-80-tcp", "https-443-tcp"]
   ingress_cidr_blocks = ["0.0.0.0/0"]
 
-  egress_rules        = ["all-all]
+  egress_rules        = ["all-all"]
   egress_cidr_blocks  = ["0.0.0.0/0"]
 }
 
@@ -47,7 +47,7 @@ resource "aws_security_group" "blog" {
   name        = "blog"
   description = "Allow http & https in. Allow everything out."
 
-  vpc_id      = data.aws_vpc.default.id
+  vpc_id = data.aws_vpc.default.id
 }
 
 resource "aws_security_group_rule" "blog_http_in" {
