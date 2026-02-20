@@ -29,12 +29,12 @@ variable "environment" {
   }
 }
 
-variable = "min_size" {
+variable "min_size" {
   description = "Mininum instances in the ASG"
   default = 1
 }
 
-variable = "max_size" {
+variable "max_size" {
   description = "Maximum instances in the ASG"
   default = 2
 }
